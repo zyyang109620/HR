@@ -222,28 +222,28 @@ Partial Class HR
 		End Try
 	End Function
 
-	''' <summary>
-	''' 取得下拉中所有資料轉為01','02字串
-	''' </summary>
-	''' <returns></returns>
-	''' <remarks></remarks>
-	Private Function MakeDDL2StrComma(ByVal ddl As DropDownList, ByVal value As String) As String
-		Dim result As String = ""
-		For i As Integer = 0 To ddl.Items.Count - 1
-			If (value = "") Then
-				If (result <> "") Then
-					result &= "','"
-				End If
-				If (ddl.Items(i).Value <> "") Then
-					result &= ddl.Items(i).Value
-				End If
-			Else
-				Return value
-			End If
-		Next
-		Return result
-	End Function
-#End Region
+	'	''' <summary>
+	'	''' 取得下拉中所有資料轉為01','02字串
+	'	''' </summary>
+	'	''' <returns></returns>
+	'	''' <remarks></remarks>
+	'	Private Function MakeDDL2StrComma(ByVal ddl As DropDownList, ByVal value As String) As String
+	'		Dim result As String = ""
+	'		For i As Integer = 0 To ddl.Items.Count - 1
+	'			If (value = "") Then
+	'				If (result <> "") Then
+	'					result &= "','"
+	'				End If
+	'				If (ddl.Items(i).Value <> "") Then
+	'					result &= ddl.Items(i).Value
+	'				End If
+	'			Else
+	'				Return value
+	'			End If
+	'		Next
+	'		Return result
+	'	End Function
+	'#End Region
 
 #Region "DataGrid_RowDataBound 處理 GridView 的 RowDataBound 動作(產出資料列的動作)"
 	''' <summary>
